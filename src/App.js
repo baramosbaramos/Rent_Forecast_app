@@ -40,6 +40,8 @@ export default App;
 // import logo from './logo.svg';
 // import './App.css';
 
+// /home/ubuntu/react-flask-app/build;
+
 // function App() {
 //   return (
 //     <div className="App">
