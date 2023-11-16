@@ -1,0 +1,22 @@
+/* .contents_box{
+    padding-top: 8%;
+    padding-left: 3%;
+} */
+
+article {
+  display: block;
+  padding-left: 3%;
+}
+
+article h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  border-bottom: solid 4px #333;
+  margin: 0.5em 0;
+  text-align: left;
+}
+
+article p {
+    text-align: left;
+    /* width: 50rem; */
+}
