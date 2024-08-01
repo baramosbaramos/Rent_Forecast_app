@@ -6,8 +6,7 @@ function Header() {
     <header>
       <h1>
         <NavLink className="header_a" to={"/"}>
-          ーーーーーーーーーーーーー
-          {/* 東西線沿線・割安物件研究所 */}
+          毎日更新！都内地下鉄の穴場物件情報をまとめるサイト
         </NavLink>
       </h1>
       <nav class="pc-nav">
@@ -17,21 +16,6 @@ function Header() {
               CONTACT
             </NavLink>
           </li>
-          {/* <li>
-            <a className="header_b" href="#">
-              コンタクト
-            </a>
-          </li> */}
-          {/* <li>
-            <a className="header_b" href="#">
-              COMPANY
-            </a>
-          </li>
-          <li>
-            <a className="header_b" href="#">
-              CONTACT
-            </a>
-          </li> */}
         </ul>
       </nav>
     </header>

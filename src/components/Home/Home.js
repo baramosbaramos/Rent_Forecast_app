@@ -11,7 +11,7 @@ function Home() {
         <article>
           <h1>このサイトについて</h1>
           <p>
-            東京メトロ東西線沿線の賃貸物件情報を収集し、AIによって一般的な相場より賃料が安い、割安な物件を算出しています。毎日午前9時に更新しています。
+            都内地下鉄の賃貸物件情報を収集し、AIによって一般的な相場より賃料が安い、割安な物件を算出しています。毎日午前9時に更新しています。
           </p>
         </article>
         <article>
@@ -23,7 +23,7 @@ function Home() {
 
       <div className="st_list_block_home">
         <ul className="ul_st-list_home">
-          {station_list.map((station) => (
+          {/* {station_list.map((station) => (
             <li className="li_st-list_home">
               <NavLink
                 className="a_st-list_home"
@@ -32,7 +32,23 @@ function Home() {
                 {station.name}駅の物件一覧
               </NavLink>
             </li>
-          ))}
+          ))} */}
+          <li className="li_st-list_home">
+              <NavLink
+                className="a_st-list_home"
+                to={"/properties/tozaisen/ek_27280"}
+              >
+                東西線沿線の物件一覧
+              </NavLink>
+              </li>
+              <li className="li_st-list_home">
+              <NavLink
+                className="a_st-list_home"
+                to={"/properties/hanzomonsen/ek_07240"}
+              >
+                半蔵門線沿線の物件一覧
+              </NavLink>
+              </li>
         </ul>
       </div>
     </div>

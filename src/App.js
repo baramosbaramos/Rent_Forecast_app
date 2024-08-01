@@ -20,13 +20,17 @@ function ScrollToTop() {
 function App() {
   return (
     <div className="App">
+      {/* ここに半蔵門線を変数として渡す */}
       <Header />
-
+      
       <ScrollToTop />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/properties">
-          <Route path="tozaisen/:stationID" element={<PropetiesByStation />} />
+         {/* ここに半蔵門線を変数として渡す */}
+          <Route path="tozaisen/:stationID" element={<PropetiesByStation rosen="東西線" />} />
+          <Route path="hanzomonsen/:stationID" element={<PropetiesByStation rosen="半蔵門線" />} />
+
           <Route index element={<NoMatch />} />
         </Route>
         <Route path="contact" element={<Contact />} />
@@ -35,5 +39,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

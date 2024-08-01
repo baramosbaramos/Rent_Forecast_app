@@ -5,6 +5,7 @@ function StationList(props) {
   return (
     <>
       <div className="st_list_block">
+        <div className="st_list_title">最寄駅から割安な物件を探す</div>
         <ul className="ul_st-list">
           {props.station_list.map((station) => (
             <li className="li_st-list">
