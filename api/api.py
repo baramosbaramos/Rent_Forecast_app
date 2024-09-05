@@ -39,6 +39,7 @@ def seaching_data(floor_space=0, access_time=20, construction_age=100, diff='dif
     except Exception as e:
         print('例外発生:', e)
     
+    
     # MySQL接続
     conn = MySQLdb.connect(db='py_scraping', user='scraper', passwd=os.environ['PASS'], charset='utf8mb4')
     cursor = conn.cursor(MySQLdb.cursors.DictCursor)
