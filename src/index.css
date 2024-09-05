@@ -1,18 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
 @import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c");
 
-html{
+html {
   font-size: 100%;
 }
 
 body {
   margin: 0;
   font-family: ui-monospace;
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: -apple-system, BlinkMacSystemFont, "Meiryo UI", "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  /* font-family: "M PLUS Rounded 1c", sans-serif; */
 }

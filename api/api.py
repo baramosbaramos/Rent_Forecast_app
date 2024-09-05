@@ -1,12 +1,14 @@
 import time
-from flask import Flask, request, jsonify, request
 import MySQLdb 
 import os
+from flask import Flask, request, jsonify, request
 from dotenv import load_dotenv
+
 #from flask_limiter import Limiter
 #from flask_limiter.util import get_remote_address
 
 app = Flask(__name__)
+
 #limiter = Limiter(
 #    get_remote_address,
 #    app=app,
@@ -15,51 +17,34 @@ app = Flask(__name__)
 #
 
 @app.route('/search', methods=["GET"])
-def seaching_data(floor_space=0, access_time=20, construction_age=50, diff='difference'):
+def seaching_data(floor_space=0, access_time=20, construction_age=100, diff='difference', renting='projected_rent'):
 
     load_dotenv()
     min_cost = 0
-    max_cost = 10000000
+    max_cost = 100000000
+    min_space = 0
+    max_space = 1000
+    max_age = 100
+    max_time = 100
     
     try:
         station_code = request.args.get('code', '')
-        cost_type = request.args.get('cost', '')
+        min_cost = int(request.args.get('mincost', ''))
+        max_cost = int(request.args.get('maxcost', ''))
+        min_space = int(request.args.get('minspace', ''))
+        max_space = int(request.args.get('maxspace', ''))
+        max_age = int(request.args.get('maxage', ''))
+        max_time = int(request.args.get('maxtime', ''))
 
     except Exception as e:
         print('例外発生:', e)
-
-    if cost_type == "1":
-        max_cost = 70000
-    elif cost_type == "2":
-        min_cost = 70000
-        max_cost = 100000
-    elif cost_type == "3":
-        min_cost = 100000
-        max_cost = 150000
-    elif cost_type == "4":
-        min_cost = 150000
-        max_cost = 200000
-    elif cost_type == "5":
-        min_cost = 200000
-        max_cost = 250000
-    elif cost_type == "6":
-        min_cost = 250000
-        max_cost = 300000
-    elif cost_type == "7":
-        min_cost = 300000
-        max_cost = 350000  
-    elif cost_type == "8":
-        min_cost = 350000
-        max_cost = 400000        
-    elif cost_type == "9":
-        min_cost = 400000
     
     # MySQL接続
     conn = MySQLdb.connect(db='py_scraping', user='scraper', passwd=os.environ['PASS'], charset='utf8mb4')
     cursor = conn.cursor(MySQLdb.cursors.DictCursor)
-    query = f'SELECT * FROM `{station_code}_properties` where {min_cost} <= total_fee and total_fee <= {max_cost} and floor_space > {floor_space} and access_time < {access_time} and construction_age < {construction_age} order by {diff}' 
+    query = f'SELECT * FROM `{station_code}_properties` where {min_cost} <= total_fee and total_fee <= {max_cost} and {min_space} <= floor_space and floor_space <= {max_space} and construction_age <= {max_age} and access_time <= {max_time} and construction_age <= {construction_age} and {diff} < 0 order by {renting} DESC limit 70' 
 
-    # 乖離率降順で上位２０件表示
+    # 適正家賃降順で上位７０件表示
     cursor.execute(query)
 
     # 辞書型のタプルを取得
@@ -73,11 +58,10 @@ def seaching_data(floor_space=0, access_time=20, construction_age=50, diff='diff
 
          if index >= 70:
           break
-    
+             
     conn.commit()  
     conn.close()
     
 
-    # JSON
-    # 辞書型をレスポンスする
+    # JSONをレスポンスする
     return jsonify(property_list)

@@ -11,44 +11,91 @@ function Home() {
         <article>
           <h1>このサイトについて</h1>
           <p>
-            都内地下鉄の賃貸物件情報を収集し、AIによって一般的な相場より賃料が安い、割安な物件を算出しています。毎日午前9時に更新しています。
+            東京メトロ沿線のすべての賃貸物件情報をAIが自動で収集し、一般的な賃料相場より安くお得な物件を表示しています。毎日午前9時に更新しています。
           </p>
         </article>
         <article>
           <h1>CONTACT</h1>
           <p>連絡先はこちら → sousou@gmail.com</p>
-          <p>当サイトに関しまして要望などがありましたらご連絡ください。</p>
+          <p>当サイトに関しましてご要望などがありましたらご連絡ください。</p>
         </article>
       </div>
 
       <div className="st_list_block_home">
+        <p className="st_list_block_title">▼路線から探す</p>
         <ul className="ul_st-list_home">
-          {/* {station_list.map((station) => (
-            <li className="li_st-list_home">
-              <NavLink
-                className="a_st-list_home"
-                to={`/properties/tozaisen/${station.id}`}
-              >
-                {station.name}駅の物件一覧
-              </NavLink>
-            </li>
-          ))} */}
           <li className="li_st-list_home">
-              <NavLink
-                className="a_st-list_home"
-                to={"/properties/tozaisen/ek_27280"}
-              >
-                東西線沿線の物件一覧
-              </NavLink>
-              </li>
-              <li className="li_st-list_home">
-              <NavLink
-                className="a_st-list_home"
-                to={"/properties/hanzomonsen/ek_07240"}
-              >
-                半蔵門線沿線の物件一覧
-              </NavLink>
-              </li>
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/tozaisen/ek_27280"}
+            >
+              東京メトロ 東西線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/marunouchisen/ek_06640"}
+            >
+              東京メトロ 丸ノ内線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/hanzomonsen/ek_07240"}
+            >
+              東京メトロ 半蔵門線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/yurakuchosen/ek_41690"}
+            >
+              東京メトロ 有楽町線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/ginzasen/ek_17640"}
+            >
+              東京メトロ 銀座線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/chiyodasen/ek_41290"}
+            >
+              東京メトロ 千代田線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/hibiyasen/ek_27580"}
+            >
+              東京メトロ 日比谷線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/nanbokusen/ek_39110"}
+            >
+              東京メトロ 南北線の物件
+            </NavLink>
+          </li>
+          <li className="li_st-list_home">
+            <NavLink
+              className="a_st-list_home"
+              to={"/properties/hukutoshinsen/ek_41690"}
+            >
+              東京メトロ 副都心線の物件
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

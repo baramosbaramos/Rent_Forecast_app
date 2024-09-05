@@ -2,23 +2,21 @@
 
 .property_table {
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 4%;
   border-collapse: collapse;
 }
 
 h2 {
-  font-size: 2.1rem;
-  color: #535353;
+  font-size: 1.6rem;
+  color: #3d3d3d;
+  padding-left: 5%;
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #535353;
+  padding-left: 5%;
 }
-
-/* .properties_title {
-  font-size: 30px;
-} */
 
 table th {
   background-color: #4a4a4a;
@@ -30,30 +28,33 @@ table th {
 table,
 table th,
 table td {
-  border: 2px solid #a09f9f;
+  border: 1.8px solid #a09f9f;
 }
 
 table td {
   letter-spacing: 0.1em;
   padding: 0.15rem;
-  /* text-align: right; */
+  max-width: 21rem;
 }
 
-.osusume{
+.osusume {
   text-align: center;
-  font-weight: bold;
   font-family: inherit;
 }
-.text-right{
+
+.text-right {
   text-align: right;
 }
-.projected_rent{
-  color:#9b1818;
+.projected_rent {
+  color: #9b1818;
   font-weight: bold;
-  /* font-family: 'Times New Roman', Times, serif; */
 }
 
-.total_fee{
+.bukken_url {
+  min-width: 20rem;
+}
+
+.total_fee {
   font-weight: bold;
 }
 
@@ -63,19 +64,22 @@ table th {
 
 .contents_box {
   display: flex;
-  margin: 10% auto 2% auto;
   width: auto;
 }
 
 .right_div {
   display: block;
-  margin-right: 2%;
   width: 20%;
+  min-width: 310px;
+  max-width: 310px;
 }
 
 .properties_content {
   font-size: medium;
-  width: 75%;
+}
+
+.properties_title {
+  padding-left: 0%;
 }
 
 .search_block1 {
@@ -84,7 +88,7 @@ table th {
   top: 30%;
   right: 10%;
   z-index: 1;
-  background-color:#e3e3e3;
+  background-color: #e6e6e6;
   border-radius: 5px 5px 5px 5px;
   border-top: 5px solid #4a4a4a;
   border-right: 5px solid #7a7a78;
@@ -92,36 +96,8 @@ table th {
   border-bottom: 1px solid #7a7a78;
 }
 
-/* .search_block1 {
-    width: 100%;
-    position: static;
-    margin-top: 88%;
-    margin-bottom: 20%;
-    top: 0%;
-    right: 0%;
-    z-index: 1;
-    background-color: #e3e3e3;
-    border-radius: 5px 5px 5px 5px;
-    border-top: 5px solid #4a4a4a;
-    border-right: 5px solid #7a7a78;
-    border-left: 1px solid #7a7a78;
-    border-bottom: 1px solid #7a7a78;
-  } */
-
 .search_block2 {
   display: none;
-  /* width: 15%;
-  height: 35%;
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  z-index: 1;
-  background-color: rgb(205, 205, 205);
-  border-radius: 5px 5px 5px 5px;
-  border-top: 5px solid #4a4a4a;
-  border-right: 5px solid #7a7a78;
-  border-left: 1px solid #7a7a78;
-  border-bottom: 1px solid #7a7a78; */
 }
 
 .search_title {
@@ -129,21 +105,31 @@ table th {
   height: 10%;
   margin-top: 0;
   color: white;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .block_title {
   font-weight: bold;
-  font-size: larger;
-  margin-bottom: 5%;
+  font-size: 0.95rem;
+  margin-bottom: 3%;
   text-align: left;
-  border-left: 5px solid #6fba2c;
+  border-left: 5px solid #50ae47;
   margin-left: 5%;
-  margin-top: 10%;
+  margin-top: 0%;
   width: 70%;
   padding-left: 2%;
 }
-.station_block {
+
+.sub_block_title {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 5%;
+  text-align: left;
+  border-left: 5px solid #a1a9a3;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 70%;
+  padding-left: 2%;
 }
 
 .access_time_block {
@@ -153,7 +139,7 @@ table th {
 
 .search_button {
   width: 75%;
-  height: 2.5rem;
+  height: 2rem;
   margin-bottom: 5%;
   background-color: #4a4a4a;
   border-bottom: 2px solid #033c6b;
@@ -203,7 +189,6 @@ table th {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  min-width: 230px;
   height: 2.8em;
   padding: 0.4em 3.6em 0.4em 0.8em;
   border: 2px solid #4a4a4a;
@@ -217,22 +202,23 @@ table th {
   outline: 1px solid #2589d0;
 }
 
-.website_block {
-  width: 15%;
-  position: absolute;
-  z-index: 1;
-  top: 70%;
-  right: 10%;
-  background-color:#e3e3e3;
-  border-radius: 5px 5px 5px 5px;
-  border-top: 5px solid #7a7a78;
-  border-right: 5px solid #7a7a78;
-  border-left: 1px solid #7a7a78;
-  border-bottom: 1px solid #7a7a78;
+.double_form_block {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 7%;
+  margin-top: 2%;
+}
+
+.deco {
+  background: linear-gradient(#0000 80%, #ffb3c4 0);
 }
 
 .website_title {
-  font-size: 25px;
+  background: linear-gradient(#0000 90%, #bb8f4c 0);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 auto;
+  width: 12rem;
 }
 
 .website_explain {
@@ -256,63 +242,71 @@ table th {
   display: block;
   padding-left: 0;
 }
-.st_list_title{
+.st_list_title {
   text-align: left;
   padding-bottom: 6%;
   color: #1f1f1f;
-  font:bold;
+  font: bold;
 }
 
 .li_st-list {
   text-align: left;
   padding-bottom: 6%;
-  /* color: #333333; */
   list-style: none;
 }
 
 .a_st-list {
-  color: #696969;
-  font-size: 1.0rem;
+  color: #000000;
+  font-size: 0.9rem;
 }
 
-/* ---------------------------------------------------------------------------- */
+.contact {
+  font-weight: 700;
+}
 
-@media screen and (max-width: 1740px) {
+.search_block3 {
+  display: none;
+}
+/* ####################################################################################################################### */
+/* ####################################################################################################################### */
 
-  
-
+@media screen and (max-width: 2200px) {
   .contents_box {
     display: flex;
-    margin: 10% auto 2% auto;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
     width: auto;
-    justify-content: space-around;
+    min-width: 1400px;
+    justify-content: center;
   }
 
   .properties_content {
-    font-size: 0.8rem;
-    width: 70%;
+    font-size: 0.75rem;
+    width: 60%;
+    min-width: 1100px;
     font-weight: 700;
   }
 
   .search_block1 {
     width: 100%;
     position: static;
-    margin-top: 88%;
+    margin-top: 7%;
     margin-bottom: 20%;
     top: 0%;
     right: 0%;
     z-index: 1;
-    background-color: #e3e3e3;
     border-radius: 5px 5px 5px 5px;
-    border-top: 5px solid #4a4a4a;
-    border-right: 5px solid #7a7a78;
-    border-left: 1px solid #7a7a78;
-    border-bottom: 1px solid #7a7a78;
+    border-top: 5px solid #50ae47;
+    border-right: 5px solid #4a4a4a;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
   }
 
   .station_block,
   .access_time_block {
     padding: 0%;
+    margin-bottom: 6%;
   }
 
   .selectbox-002 {
@@ -330,10 +324,10 @@ table th {
   .selectbox-002::before {
     right: 0;
     display: inline-block;
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: 0 3px 3px 0;
-    background-color: #8d8d8d;
+    background-color: #646363;
     content: "";
   }
 
@@ -341,7 +335,7 @@ table th {
     position: absolute;
     top: 40%;
     right: 1.4em;
-    transform: translate(50%, -50%) rotate(45deg);
+    transform: translate(85%, -40%) rotate(45deg);
     width: 6px;
     height: 6px;
     border-bottom: 3px solid #fff;
@@ -353,42 +347,102 @@ table th {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 14.8rem;
-    max-width: 95%;
-    height: 2.5em;
+    width: 13rem;
+    height: 2.2rem;
     padding: 0.2em 3.6em 0.2em 0.8em;
-    /* border: 2px solid #2589d0; */
     border-radius: 3px;
     color: #333333;
-    font-size: 1em;
+    font-size: 0.85rem;
     cursor: pointer;
+    font-weight: bold;
   }
 
   .selectbox-002 select:focus {
     outline: 1px solid #2589d0;
   }
 
+  .selectbox-003 {
+    position: relative;
+  }
+
+  .selectbox-003::before,
+  .selectbox-003::after {
+    position: absolute;
+    content: "";
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .selectbox-003::before {
+    right: 0;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0 3px 3px 0;
+    background-color: #646363;
+    content: "";
+  }
+
+  .selectbox-003::after {
+    position: absolute;
+    top: 40%;
+    right: 1.2em;
+    transform: translate(85%, -40%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    content: "";
+  }
+
+  .selectbox-003 select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 8rem;
+    max-width: 95%;
+    height: 2rem;
+    padding: 0.2em 3.6em 0.2em 0.8em;
+    border-radius: 3px;
+    color: #333333;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-color: #bbbbbb;
+    font-weight: bold;
+  }
+
+  .selectbox-003 select:focus {
+    outline: 1px solid #2589d0;
+  }
+
   .search_button {
-    width: 75%;
+    width: 65%;
     min-width: 190px;
     margin-bottom: 5%;
-    border-bottom: 2px solid #033c6b;
+    margin-top: 3%;
+    border-bottom: 2px solid #000000;
     color: #fff;
   }
 
   .website_block {
+    background-color: #ffe9e9;
     width: 100%;
     position: static;
-    top: 0%;
-    right: 0%;
-    z-index: 1;
     margin-bottom: 10%;
-    background-color: #e3e3e3;
-    border-radius: 5px 5px 5px 5px;
-    border-top: 5px solid #7a7a78;
-    border-right: 5px solid #7a7a78;
-    border-left: 1px solid #7a7a78;
-    border-bottom: 1px solid #7a7a78;
+    font-size: 0.9rem;
+  }
+
+  .box8 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff1cf;
+    border-left: solid 10px #ffc06e;
+    border-radius: 5px;
+  }
+  .box8 p {
+    /* margin: 0; */
+    padding: 0;
   }
 
   .st_list_block {
@@ -401,18 +455,106 @@ table th {
     border-radius: 5px 5px 5px 5px;
   }
   .li_st-list {
-    padding-bottom: 6%;
-    font-size: 1.1rem;
+    padding-bottom: 5%;
+    font-size: 0.5rem;
   }
 }
 
-/* ---------------------------------------------------------------------------- */
+@media screen and (max-width: 1800px) {
+  .sub_block_title {
+    font-size: 0.9rem;
+  }
 
-@media screen and (max-width: 1200px) {
-  /* 960px以下に適用されるCSS（タブレット用） */
+  .search_title {
+    font-size: 1rem;
+  }
+  .sub_block_title {
+    margin-bottom: 4%;
+    margin-top: 0%;
+  }
+  .station_block {
+    margin-bottom: 7%;
+  }
 
-  
+  .search_button {
+    margin-top: 3%;
+    width: 60%;
+    min-width: 180px;
+    font-size: 0.9rem;
+    height: 2rem;
+    margin-bottom: 3%;
+  }
+  .selectbox-002 select {
+    font-size: 0.8rem;
+    font-weight: 700;
+    height: 2rem;
+    width: 12rem;
+  }
+  .selectbox-002:before {
+    height: 2rem;
+    width: 2rem;
+  }
+  .selectbox-002:after {
+    transform: translate(110%, -40%) rotate(45deg);
+  }
+  .selectbox-003 select {
+    font-size: 0.75rem;
+    height: 1.8rem;
+    width: 7.5rem;
+  }
+  .selectbox-003:before {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  .li_st-list {
+    font-size: 0.3rem;
+  }
+  .properties_content {
+    font-size: 0.7rem;
+  }
+  .block_title {
+    font-size: 0.9rem;
+  }
 
+  .website_block {
+    font-size: 0.85rem;
+  }
+}
+
+/* ####################################################################################################################### */
+/* ####################################################################################################################### */
+
+@media screen and (max-width: 1380px) {
+  table th {
+    font-weight: 900;
+    padding: 0.25rem;
+  }
+
+  .contents_box {
+    min-width: 0px;
+  }
+
+  .properties_content {
+    font-size: 0.7rem;
+    width: 72%;
+    min-width: 900px;
+    font-weight: 1000;
+  }
+
+  .bukken_url {
+    min-width: 14rem;
+  }
+
+  .search_block1 {
+    width: 100%;
+  }
+}
+
+/* ####################################################################################################################### */
+/* ####################################################################################################################### */
+
+@media screen and (max-width: 840px) {
+  /* 840px-760pxまでタブレットの画面を綺麗に見せること。 */
   header {
     width: 100%;
     height: 8%;
@@ -426,8 +568,7 @@ table th {
 
   .header_a {
     text-decoration: none;
-    color: #4b4b4b;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     vertical-align: middle;
   }
 
@@ -439,12 +580,9 @@ table th {
     vertical-align: middle;
   }
 
-  /* .properties_title {
-    font-size: 1.5rem;
-  } */
-
   .contents_box {
     display: block;
+    min-width: 0px;
     margin: 10% auto 2% auto;
   }
 
@@ -455,9 +593,10 @@ table th {
   }
 
   .properties_content {
-    width: 97%;
+    width: 95%;
     margin: 0 auto;
     padding-top: 0.5%;
+    min-width: 700px;
   }
 
   .property_table {
@@ -466,42 +605,20 @@ table th {
     width: 99%;
   }
 
-  /* table,
-  table th,
-  table td {
-    border: 1px solid black;
-    letter-spacing: 0.1em;
-    word-break: break-all;
-  } */
-
   .search_block1 {
     display: none;
-    width: 95%;
-    min-width: 300px;
-    height: 1%;
-    margin: 2% auto 0 auto;
-    position: static;
-    z-index: 1;
-    top: 30%;
-    right: 10%;
-    background-color: #e3e3e3;
-    border-radius: 5px 5px 5px 5px;
-    border-top: 5px solid #4a4a4a;
-    border-right: 5px solid #7a7a78;
-    border-left: 1px solid #7a7a78;
-    border-bottom: 1px solid #7a7a78;
   }
 
   .search_block2 {
     display: block;
     width: 95%;
-    max-width: 600px;
+    min-width: 680px;
     height: 1%;
-    margin: 20% auto 0 auto;
+    margin: 13% auto 0 auto;
     position: static;
-    z-index: 1;
-    top: 40%;
-    right: 10%;
+    /* z-index: 1; */
+    /* top: 40%;
+    right: 10%; */
     background-color: #e8e8e8;
     border-radius: 5px 5px 5px 5px;
     border-top: 5px solid #4a4a4a;
@@ -515,12 +632,7 @@ table th {
 
     margin-top: 0;
     color: white;
-    font-size: 1rem;
-  }
-
-  .search_form {
-    display: flex;
-    justify-content: space-between;
+    font-size: 1.3rem;
   }
 
   .form_group {
@@ -529,21 +641,63 @@ table th {
     flex-grow: 1;
   }
 
-  .block_title {
-    font-weight: bold;
-    font-size: 0.1rem;
-    margin-bottom: 1%;
-    text-align: left;
-    border-left: 5px solid #6fba2c;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0;
-    width: 10%;
-    padding-left: 2%;
-    display: none;
+  .mini_flex {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
   }
+
+  .block_title_mini {
+    font-weight: 700;
+    /* font-size: 1.2rem; */
+    margin-bottom: 5%;
+    text-align: left;
+    border-left: 5px solid #50ae47;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 5rem;
+    padding-left: 2%;
+  }
+
+  .sub_block_title_mini {
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 5%;
+    text-align: left;
+    border-left: 5px solid #a1a9a3;
+    width: 6rem;
+    height: 3%;
+    padding-left: 2%;
+  }
+
+  .rosen_title {
+    margin-right: 4.7%;
+  }
+
   .station_block {
-    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    padding: 1%;
+  }
+
+  .fee_block {
+    text-align: left;
+    display: flex;
+    height: 3%;
+    padding: 2% 3% 1% 1%;
+  }
+
+  .fee_two_block {
+    text-align: left;
+    display: flex;
+    height: 3%;
+    margin-right: 0;
+    padding: 2% 1% 1% 1%;
+  }
+
+  .selectbox-003 {
+    position: relative;
+    margin-right: 10px;
   }
 
   .access_time_block {
@@ -555,12 +709,14 @@ table th {
     width: 30%;
     min-width: 200px;
     margin-bottom: 3%;
-    border-bottom: 2px solid #033c6b;
+    border-bottom: none;
     color: #fff;
+    margin-top: 4%;
   }
 
   .selectbox-002 {
     position: relative;
+    background-color: white;
   }
 
   .selectbox-002::before,
@@ -577,7 +733,6 @@ table th {
     width: 2.5em;
     height: 2.5em;
     border-radius: 0 3px 3px 0;
-    background-color: #8d8d8d;
     content: "";
   }
 
@@ -597,13 +752,13 @@ table th {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    min-width: 260px;
-    height: 2.5em;
+    min-width: 15rem;
+    height: 2.5rem;
     padding: 0.4em 3.6em 0.4em 0.8em;
-    /* border: 2px solid #2589d0; */
+
     border-radius: 3px;
     color: #333333;
-    font-size: 1em;
+    font-size: 0.9rem;
     cursor: pointer;
   }
 
@@ -616,15 +771,6 @@ table th {
     height: 50%;
     position: static;
     margin: 2% auto;
-    border-radius: 5px 5px 5px 5px;
-    border-top: 5px solid #7a7a78;
-    border-right: 5px solid #7a7a78;
-    border-left: 1px solid #7a7a78;
-    border-bottom: 1px solid #7a7a78;
-  }
-
-  .website_title {
-    font-size: 25px;
   }
 
   .website_explain {
@@ -637,67 +783,177 @@ table th {
   .st_list_block {
     display: none;
   }
-
-  /* ---------------------------------------------------------------------------- */
-  @media screen and (max-width: 960px) {
-    table,
-    table th,
-    table td {
-      border: 1px solid black;
-      letter-spacing: 0.1em;
-      word-break: break-all;
-      font-size: 0.7rem;
-    }
-
+  table,
+  table th,
+  table td {
+    border: 1px solid black;
+    letter-spacing: 0.1em;
+    word-break: break-all;
+    font-size: 0.7rem;
   }
 
-
-
-  @media screen and (max-width: 520px) {
-
-    .search_block2 {
-      display: block;
-      margin: 30% 3% 0;
-      max-width: 600px;
-      top: 50%;
-  }
-
-    h2 {
-      font-size: 1.7rem;
-    }
-    
-    h4 {
-      font-size: 1.0rem;
-    }
-
-    .header_a {
-      text-decoration: none;
-      color: #4b4b4b;
-      font-style: oblique;
-      font-size: 1.1rem;
-      text-align: start;
-    }
-
-    /* .properties_title {
-      font-size: 1rem;
-    } */
-
-    table {
-      display: block;
-      overflow-x: scroll;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-  }
-
-  @media screen and (max-width: 400px) {
-
-    .search_block2 {
-      display: block;
-      margin: 40% 3% 0;
-      max-width: 600px;
-      top: 50%;
+  .header_kai {
+    display: inline-block;
   }
 }
+
+/* ####################################################################################################################### */
+/* ####################################################################################################################### */
+
+@media screen and (max-width: 520px) {
+  /* 414px-360pxまで快適に表示する */
+
+  .website_title {
+    font-size: 1.3rem;
+  }
+
+  .properties_content {
+    width: 97%;
+    min-width: 0;
+  }
+
+  .contents_box {
+    margin: 25% auto 2% auto;
+  }
+
+  .station_block {
+    text-align: left;
+    display: flex;
+    padding: 1%;
+    justify-content: space-around;
+    margin-bottom: 15px;
+  }
+
+  .search_block3 {
+    border-color: #50ae47 #4a4a4a #4a4a4a #4a4a4a;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 5px 1px 1px 1px;
+    display: block;
+    height: 1%;
+    margin: 13% auto 0;
+    position: static;
+    width: 94%;
+    background-color: #e2e2e2;
+    min-width: 310px;
+  }
+
+  .search_block2 {
+    display: none;
+    margin: 30% 3% 0;
+    max-width: 600px;
+    top: 50%;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .header_a {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .block_title {
+    margin-top: 0px;
+    margin-bottom: 2px;
+  }
+  .search_title {
+    font-size: 1.1rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .double_form_block {
+    margin-bottom: 15px;
+  }
+  .sub_block_title {
+    margin-bottom: 13px;
+  }
+  .right_div {
+    max-width: none;
+  }
+  .st_list_block {
+    padding: 4%;
+  }
+  .header_kai {
+    display: inline-block;
+  }
+  .selectbox-003 select {
+    width: 9rem;
+  }
+  h2 {
+    padding-left: 0;
+  }
+  h4 {
+    padding-left: 0;
+  }
+}
+
+/* ####################################################################################################################### */
+/* ####################################################################################################################### */
+
+@media screen and (max-width: 430px) {
+  .header_a {
+    font-size: 0.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  option {
+    font-size: 1rem;
+  }
+  .contents_box {
+    margin: 21% auto 2%;
+  }
+
+  .selectbox-002:before {
+    height: 2rem;
+    width: 2rem;
+  }
+  .selectbox-002 select {
+    height: 2rem;
+    min-width: 12rem;
+    width: 12rem;
+    font-size: 0.87rem;
+  }
+  .selectbox-002:after {
+    top: 45%;
+    transform: translate(120%, -39%) rotate(45deg);
+  }
+
+  .selectbox-003 select {
+    height: 1.9rem;
+    width: 7.5rem;
+  }
+  .sub_block_title {
+    margin-bottom: 5px;
+  }
+  .selectbox-003:before {
+    height: 1.9rem;
+    width: 1.9rem;
+  }
+  .selectbox-003:after {
+    top: 45%;
+    transform: translate(98%, -40%) rotate(45deg);
+  }
+  .search_title {
+    font-size: 1rem;
+  }
+  .block_title,
+  .sub_block_title {
+    font-size: 0.9rem;
+  }
+  .search_button {
+    margin-top: 2%;
+  }
 }

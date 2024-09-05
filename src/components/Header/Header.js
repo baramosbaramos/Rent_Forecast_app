@@ -6,13 +6,15 @@ function Header() {
     <header>
       <h1>
         <NavLink className="header_a" to={"/"}>
-          毎日更新！都内地下鉄の穴場物件情報をまとめるサイト
+          {/* --- */}
+          <span class="header_kai">毎日更新！東京２３区の</span>
+          <span class="header_kai">穴場賃貸物件をまとめるサイト</span>
         </NavLink>
       </h1>
       <nav class="pc-nav">
         <ul>
-          <li className="header_b" href="#">
-            <NavLink className="a_st-list" to={"/contact"}>
+          <li className="header_b contact" href="#">
+            <NavLink className="a_st-list contact" to={"/contact"}>
               CONTACT
             </NavLink>
           </li>
