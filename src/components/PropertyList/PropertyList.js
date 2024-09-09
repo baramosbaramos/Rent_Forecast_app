@@ -89,7 +89,6 @@ function PropertyList(props) {
           （更新：{year}年{month}月{day}日）
         </h4>
       </p>
-
       <table className="property_table">
         <tr>
           <th>

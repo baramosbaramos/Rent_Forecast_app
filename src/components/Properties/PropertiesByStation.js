@@ -168,6 +168,7 @@ function PropetiesByStation(props) {
     max_search_access_time,
   ]);
 
+  
   if (!property_list) return "No post!";
 
   return (
