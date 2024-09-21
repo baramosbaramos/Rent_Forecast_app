@@ -1,18 +1,41 @@
 article {
   display: block;
-  padding-left: 3%;
+  padding-left: 1%;
 }
 
 article h1 {
   font-size: 1.6em;
   font-weight: bold;
-  border-bottom: solid 4px #333;
+  border-bottom: 2px solid #886c22;
   margin: 0.5em 0;
   text-align: left;
 }
 
 article p {
   text-align: left;
+}
+
+.box25 {
+  position: relative;
+  background: #fff0cd;
+  box-shadow: 0px 0px 0px 5px #fff0cd;
+  border: dashed 2px white;
+  padding: 1em 1em 1em 0.5em;
+  color: #454545;
+}
+.box25:after {
+  position: absolute;
+  content: "";
+  right: -7px;
+  top: -7px;
+  border-width: 0 15px 15px 0;
+  border-style: solid;
+  border-color: #ffdb88 #fff #ffdb88;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.box25 p {
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 430px) {

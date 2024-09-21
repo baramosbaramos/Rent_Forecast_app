@@ -8,17 +8,19 @@ function Home() {
   return (
     <div className="contents_box">
       <div className="home_block">
-        <article>
-          <h1>このサイトについて</h1>
-          <p>
-            東京メトロ沿線のすべての賃貸物件情報をAIが自動で収集し、一般的な賃料相場より安くお得な物件を表示しています。毎日午前9時に更新しています。
-          </p>
-        </article>
-        <article>
-          <h1>CONTACT</h1>
-          <p>連絡先はこちら → sousou@gmail.com</p>
-          <p>当サイトに関しましてご要望などがありましたらご連絡ください。</p>
-        </article>
+        <div class="box25">
+          <article>
+            <h1>このサイトについて</h1>
+            <p>
+              東京メトロ沿線のすべての賃貸物件情報をAIが自動で収集し、一般的な賃料相場より安くお得な物件を表示しています。毎日午前9時に更新しています。
+            </p>
+          </article>
+          <article>
+            <h1>CONTACT</h1>
+            <p>連絡先はこちら → sousou@gmail.com</p>
+            <p>当サイトに関しましてご要望などがありましたらご連絡ください。</p>
+          </article>
+        </div>
       </div>
 
       <div className="st_list_block_home">

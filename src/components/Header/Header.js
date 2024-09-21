@@ -15,7 +15,7 @@ function Header() {
         <ul>
           <li className="header_b contact" href="#">
             <NavLink className="a_st-list contact" to={"/contact"}>
-              CONTACT
+              運営者情報
             </NavLink>
           </li>
         </ul>
