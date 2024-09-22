@@ -60,7 +60,7 @@ def seaching_data(
     # 適正家賃降順で上位７０件表示
     cursor.execute(query)
 
-    # 辞書型のタプルを取得
+    # 辞書型のタプルを辞書型の配列に変換する
     property_tuple = cursor.fetchall()
     property_list = []
     index = 0
